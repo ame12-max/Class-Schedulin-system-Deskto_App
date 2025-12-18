@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(375, 19);
+            this.label1.Location = new System.Drawing.Point(637, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 47);
             this.label1.TabIndex = 0;
@@ -53,14 +53,14 @@
             this.dgvFeedback.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFeedback.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvFeedback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFeedback.Location = new System.Drawing.Point(69, 127);
+            this.dgvFeedback.Location = new System.Drawing.Point(35, 69);
             this.dgvFeedback.MultiSelect = false;
             this.dgvFeedback.Name = "dgvFeedback";
             this.dgvFeedback.ReadOnly = true;
             this.dgvFeedback.RowHeadersWidth = 62;
             this.dgvFeedback.RowTemplate.Height = 28;
             this.dgvFeedback.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFeedback.Size = new System.Drawing.Size(1163, 363);
+            this.dgvFeedback.Size = new System.Drawing.Size(1694, 421);
             this.dgvFeedback.TabIndex = 1;
             // 
             // btnRefresh
@@ -68,7 +68,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnRefresh.Location = new System.Drawing.Point(182, 532);
+            this.btnRefresh.Location = new System.Drawing.Point(168, 580);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(168, 64);
             this.btnRefresh.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnClose.Location = new System.Drawing.Point(937, 532);
+            this.btnClose.Location = new System.Drawing.Point(933, 580);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 64);
             this.btnClose.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 629);
+            this.ClientSize = new System.Drawing.Size(1764, 710);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvFeedback);

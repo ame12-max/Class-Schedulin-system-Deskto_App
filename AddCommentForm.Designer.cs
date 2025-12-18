@@ -67,14 +67,14 @@
             // dgvSchedules
             // 
             this.dgvSchedules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSchedules.Location = new System.Drawing.Point(700, 58);
+            this.dgvSchedules.Location = new System.Drawing.Point(670, 58);
             this.dgvSchedules.MultiSelect = false;
             this.dgvSchedules.Name = "dgvSchedules";
             this.dgvSchedules.ReadOnly = true;
             this.dgvSchedules.RowHeadersWidth = 62;
             this.dgvSchedules.RowTemplate.Height = 28;
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedules.Size = new System.Drawing.Size(516, 427);
+            this.dgvSchedules.Size = new System.Drawing.Size(1077, 427);
             this.dgvSchedules.TabIndex = 2;
             this.dgvSchedules.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSchedules_CellContentClick);
             // 
@@ -118,6 +118,7 @@
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // button1
             // 
@@ -136,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 666);
+            this.ClientSize = new System.Drawing.Size(1799, 666);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
