@@ -39,7 +39,8 @@ namespace ClassSchedulingSystem
             public string Password { get; set; }
 
             public int UserId { get; set; }
-            public int Phone { get; set; }
+           
+            public int DepartmentId { get; set; }
 
 
         }
@@ -50,7 +51,7 @@ namespace ClassSchedulingSystem
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = "SELECT UserId, UserName, Password, Role, Phone FROM Users WHERE UserName=@u";
+                string query = "SELECT UserId, UserName, Password, Role ,DepartmentId FROM Users WHERE UserName=@u";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@u", userName);
 
@@ -63,9 +64,9 @@ namespace ClassSchedulingSystem
                     {
                         UserId = Convert.ToInt32(reader["UserId"]),
                         UserName = reader["UserName"].ToString(),
-                        Password = reader["Password"].ToString(),  // REQUIRED now
+                        Password = reader["Password"].ToString(),  
                         Role = reader["Role"].ToString(),
-                        Phone = Convert.ToInt32(reader["Phone"])
+                        DepartmentId = Convert.ToInt32(reader["DepartmentId"])
                     };
                 }
             }
@@ -80,7 +81,6 @@ namespace ClassSchedulingSystem
 
             string userName = txtUser.Text;
             string password = txtPass.Text;
-            int phone = int.Parse(txtPhone.Text);
 
             var user = GetUserByUsername(userName);
 
@@ -96,20 +96,16 @@ namespace ClassSchedulingSystem
                 return;
             }
 
-            if (user.Phone != phone)
-            {
-                MessageBox.Show("Incorrect phone number");
-                return;
-            }
+          
 
             MessageBox.Show($"Welcome {user.UserName}, Your Role: {user.Role}");
 
             if (user.Role == "Instructor")
                 new InstructorDashboard(user.UserName, user.UserId,user.Role).Show();
             else if (user.Role == "Student")
-                new StudentDashboard(user.UserId, user.UserName, user.Role).Show();
+                new StudentDashboard(user.UserId, user.UserName, user.Role, user.DepartmentId).Show();
             else if (user.Role == "Department Head")
-                new DepartmentHeadDashboard(user.UserName, user.UserId, user.Role).Show();
+                new DepartmentHeadDashboard(user.UserName, user.UserId, user.Role, user.DepartmentId).Show();
 
             this.Hide();
         }
@@ -117,24 +113,13 @@ namespace ClassSchedulingSystem
 
 
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginForm_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
     }

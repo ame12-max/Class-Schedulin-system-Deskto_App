@@ -28,21 +28,26 @@ namespace ClassSchedulingSystem
         }
         private void LoadMySchedules()
         {
-            string cs = @"Data Source=.\SQLEXPRESS;Initial Catalog=Class_scheduling;Integrated Security=True;TrustServerCertificate=True";
+            string cs = @"Data Source=.\SQLEXPRESS;
+                  Initial Catalog=Class_scheduling;
+                  Integrated Security=True;
+                  TrustServerCertificate=True";
 
             using (SqlConnection con = new SqlConnection(cs))
             {
                 string q = @"
-        SELECT 
-            c.CourseName,
-            s.DayOfWeek,
-            s.StartTime,
-            s.EndTime,
-            s.Room
-        FROM Schedules s
-        JOIN Courses c ON s.CourseId = c.CourseId
-        JOIN Users u ON s.InstructorId = u.UserId
-        WHERE u.userName = @username";
+            SELECT 
+                c.CourseName,
+                d.DepartmentName AS Department,
+                s.DayOfWeek,
+                s.StartTime,
+                s.EndTime,
+                s.Room
+            FROM Schedules s
+            JOIN Courses c ON s.CourseId = c.CourseId
+            JOIN Users u ON s.InstructorId = u.UserId
+            JOIN Departments d ON u.DepartmentId = d.DepartmentId
+            WHERE u.userName = @username";
 
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.Parameters.AddWithValue("@username", instructorUsername);
@@ -54,6 +59,7 @@ namespace ClassSchedulingSystem
                 dgvSchedules.DataSource = dt;
             }
         }
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {

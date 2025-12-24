@@ -33,7 +33,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnViewSchedule = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnViewFeedback = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -44,6 +43,8 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblDepartment = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -114,19 +115,6 @@
             this.btnViewSchedule.Text = "View Shcedule";
             this.btnViewSchedule.UseVisualStyleBackColor = false;
             this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(224, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(556, 47);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Department Head Dashboard";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -245,11 +233,35 @@
             this.lblWelcome.TabIndex = 28;
             this.lblWelcome.Text = "User";
             // 
+            // lblDepartment
+            // 
+            this.lblDepartment.AutoSize = true;
+            this.lblDepartment.Font = new System.Drawing.Font("Microsoft YaHei", 20F, System.Drawing.FontStyle.Bold);
+            this.lblDepartment.ForeColor = System.Drawing.Color.Red;
+            this.lblDepartment.Location = new System.Drawing.Point(81, 9);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(0, 52);
+            this.lblDepartment.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.Location = new System.Drawing.Point(499, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 37);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Department Head Dashboard";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // DepartmentHeadDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1843, 834);
+            this.Controls.Add(this.lblDepartment);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -279,7 +291,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnViewSchedule;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnViewFeedback;
         private System.Windows.Forms.Button btnLogout;
@@ -290,5 +301,7 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblDepartment;
+        private System.Windows.Forms.Label label1;
     }
 }

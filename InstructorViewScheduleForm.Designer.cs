@@ -48,7 +48,7 @@
             this.dgvSchedules.RowHeadersWidth = 62;
             this.dgvSchedules.RowTemplate.Height = 28;
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedules.Size = new System.Drawing.Size(1068, 322);
+            this.dgvSchedules.Size = new System.Drawing.Size(1640, 403);
             this.dgvSchedules.TabIndex = 0;
             // 
             // btnClose
@@ -56,7 +56,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.Location = new System.Drawing.Point(846, 490);
+            this.btnClose.Location = new System.Drawing.Point(876, 568);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(189, 64);
             this.btnClose.TabIndex = 22;
@@ -69,7 +69,7 @@
             this.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefresh.Location = new System.Drawing.Point(108, 490);
+            this.btnRefresh.Location = new System.Drawing.Point(110, 568);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(185, 64);
             this.btnRefresh.TabIndex = 21;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ClassSchedulingSystem.loginForm;
 
 namespace ClassSchedulingSystem
 {
@@ -16,13 +17,15 @@ namespace ClassSchedulingSystem
         private int loggedInUserId;
         private string _username;
         private string _Role;
+        private int _DepartmentId;
 
-        public StudentDashboard(int userId, string username,string Role)
+        public StudentDashboard(int userId, string username,string Role, int DepartmentId)
         {
             InitializeComponent();
             loggedInUserId = userId;
             _username = username;
             _Role = Role;
+            _DepartmentId = DepartmentId;
         }
 
 
@@ -36,12 +39,17 @@ namespace ClassSchedulingSystem
             lblWelcome.Text = "Welcome " + _username;
             lblName.Text = "👤 " + _username;
             lblRolee.Text = " 📌  " + _Role;
+
+            LoadDepartmentName();
             LoadSchedules();
         }
 
         private void LoadSchedules()
         {
-            string cs = @"Data Source=.\SQLEXPRESS;Initial Catalog=Class_scheduling;Integrated Security=True;TrustServerCertificate=True";
+            string cs = @"Data Source=.\SQLEXPRESS;
+                  Initial Catalog=Class_scheduling;
+                  Integrated Security=True;
+                  TrustServerCertificate=True";
 
             using (SqlConnection con = new SqlConnection(cs))
             {
@@ -55,15 +63,49 @@ namespace ClassSchedulingSystem
             s.Room
         FROM Schedules s
         JOIN Courses c ON s.CourseId = c.CourseId
-        JOIN Users u ON s.InstructorId = u.UserId";
+        JOIN Users u ON s.InstructorId = u.UserId
+        WHERE c.DepartmentId = @DepartmentId";
 
-                SqlDataAdapter da = new SqlDataAdapter(q, con);
+                SqlCommand cmd = new SqlCommand(q, con);
+                cmd.Parameters.AddWithValue("@DepartmentId", _DepartmentId);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
                 dgvSchedules.DataSource = dt;
             }
         }
+
+
+        private void LoadDepartmentName()
+        {
+            string cs = @"Data Source=.\SQLEXPRESS;
+                  Initial Catalog=Class_scheduling;
+                  Integrated Security=True;
+                  TrustServerCertificate=True";
+
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                string query = "SELECT DepartmentName FROM Departments WHERE DepartmentId = @deptId";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@deptId", _DepartmentId);
+
+                con.Open();
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    lblDepartment.Text = "🏫 " + result.ToString();
+                }
+                else
+                {
+                    lblDepartment.Text = "🏫 Unknown Department";
+                }
+            }
+        }
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -88,5 +130,14 @@ namespace ClassSchedulingSystem
             this.Close();
         }
 
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

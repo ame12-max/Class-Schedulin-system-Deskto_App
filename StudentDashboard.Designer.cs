@@ -36,10 +36,12 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblRolee = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblRolee = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblDepartment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedules)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,12 +51,12 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblWelcome.Location = new System.Drawing.Point(209, 9);
+            this.lblWelcome.Location = new System.Drawing.Point(534, 67);
             this.lblWelcome.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(91, 40);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 40);
             this.lblWelcome.TabIndex = 15;
-            this.lblWelcome.Text = "Well";
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // dgvSchedules
             // 
@@ -63,14 +65,14 @@
             this.dgvSchedules.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSchedules.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvSchedules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSchedules.Location = new System.Drawing.Point(74, 122);
+            this.dgvSchedules.Location = new System.Drawing.Point(158, 205);
             this.dgvSchedules.MultiSelect = false;
             this.dgvSchedules.Name = "dgvSchedules";
             this.dgvSchedules.ReadOnly = true;
             this.dgvSchedules.RowHeadersWidth = 62;
             this.dgvSchedules.RowTemplate.Height = 28;
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedules.Size = new System.Drawing.Size(1001, 498);
+            this.dgvSchedules.Size = new System.Drawing.Size(1001, 437);
             this.dgvSchedules.TabIndex = 16;
             this.dgvSchedules.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSchedules_CellContentClick);
             // 
@@ -79,12 +81,13 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(283, 65);
+            this.label1.Location = new System.Drawing.Point(478, 133);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 32);
             this.label1.TabIndex = 17;
             this.label1.Text = "All Schedules";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnRefresh
             // 
@@ -140,7 +143,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.lblRolee);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblRole);
@@ -149,6 +152,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(360, 134);
             this.panel1.TabIndex = 24;
+            // 
+            // lblRolee
+            // 
+            this.lblRolee.AutoSize = true;
+            this.lblRolee.BackColor = System.Drawing.Color.Transparent;
+            this.lblRolee.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolee.ForeColor = System.Drawing.Color.Magenta;
+            this.lblRolee.Location = new System.Drawing.Point(25, 77);
+            this.lblRolee.Name = "lblRolee";
+            this.lblRolee.Size = new System.Drawing.Size(87, 31);
+            this.lblRolee.TabIndex = 29;
+            this.lblRolee.Text = "label3";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblName.Location = new System.Drawing.Point(18, 25);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(87, 31);
+            this.lblName.TabIndex = 28;
+            this.lblName.Text = "label3";
             // 
             // lblRole
             // 
@@ -170,35 +197,34 @@
             this.lblUsername.Size = new System.Drawing.Size(0, 32);
             this.lblUsername.TabIndex = 26;
             // 
-            // lblName
+            // label2
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(18, 25);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(87, 31);
-            this.lblName.TabIndex = 28;
-            this.lblName.Text = "label3";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(602, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(271, 42);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Class Schedules";
             // 
-            // lblRolee
+            // lblDepartment
             // 
-            this.lblRolee.AutoSize = true;
-            this.lblRolee.BackColor = System.Drawing.Color.Transparent;
-            this.lblRolee.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolee.ForeColor = System.Drawing.Color.White;
-            this.lblRolee.Location = new System.Drawing.Point(25, 77);
-            this.lblRolee.Name = "lblRolee";
-            this.lblRolee.Size = new System.Drawing.Size(87, 31);
-            this.lblRolee.TabIndex = 29;
-            this.lblRolee.Text = "label3";
+            this.lblDepartment.AutoSize = true;
+            this.lblDepartment.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartment.ForeColor = System.Drawing.Color.Red;
+            this.lblDepartment.Location = new System.Drawing.Point(122, 5);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(0, 47);
+            this.lblDepartment.TabIndex = 26;
             // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1740, 825);
+            this.Controls.Add(this.lblDepartment);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnClose);
@@ -235,5 +261,7 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblRolee;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDepartment;
     }
 }

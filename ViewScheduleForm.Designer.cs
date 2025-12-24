@@ -58,7 +58,7 @@
             this.dgvSchedules.RowHeadersWidth = 62;
             this.dgvSchedules.RowTemplate.Height = 28;
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedules.Size = new System.Drawing.Size(1064, 402);
+            this.dgvSchedules.Size = new System.Drawing.Size(1546, 402);
             this.dgvSchedules.TabIndex = 1;
             // 
             // btnRefresh
