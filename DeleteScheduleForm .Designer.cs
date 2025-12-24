@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1462, 704);
+            this.ClientSize = new System.Drawing.Size(1779, 704);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRefresh);
@@ -116,6 +116,7 @@
             this.Name = "DeleteScheduleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete Schedule";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DeleteScheduleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedules)).EndInit();
             this.ResumeLayout(false);

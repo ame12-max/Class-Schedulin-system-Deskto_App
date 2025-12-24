@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,17 +66,30 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(34, 12);
+            this.panel1.Location = new System.Drawing.Point(2, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1223, 688);
+            this.panel1.Size = new System.Drawing.Size(1743, 688);
             this.panel1.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClose.Location = new System.Drawing.Point(1349, 586);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(224, 66);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Orange;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnClear.Location = new System.Drawing.Point(571, 562);
+            this.btnClear.Location = new System.Drawing.Point(994, 589);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(165, 65);
             this.btnClear.TabIndex = 14;
@@ -89,7 +102,7 @@
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSave.Location = new System.Drawing.Point(193, 562);
+            this.btnSave.Location = new System.Drawing.Point(520, 589);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 65);
             this.btnSave.TabIndex = 13;
@@ -102,7 +115,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(116, 461);
+            this.label7.Location = new System.Drawing.Point(344, 460);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 32);
             this.label7.TabIndex = 12;
@@ -110,54 +123,54 @@
             // 
             // txtRoom
             // 
-            this.txtRoom.Location = new System.Drawing.Point(360, 467);
+            this.txtRoom.Location = new System.Drawing.Point(606, 467);
             this.txtRoom.Name = "txtRoom";
-            this.txtRoom.Size = new System.Drawing.Size(253, 26);
+            this.txtRoom.Size = new System.Drawing.Size(308, 26);
             this.txtRoom.TabIndex = 11;
             // 
             // dtEndTime
             // 
             this.dtEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtEndTime.Location = new System.Drawing.Point(360, 405);
+            this.dtEndTime.Location = new System.Drawing.Point(606, 388);
             this.dtEndTime.Name = "dtEndTime";
             this.dtEndTime.ShowUpDown = true;
-            this.dtEndTime.Size = new System.Drawing.Size(253, 26);
+            this.dtEndTime.Size = new System.Drawing.Size(308, 26);
             this.dtEndTime.TabIndex = 10;
             // 
             // dtStartTime
             // 
             this.dtStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtStartTime.Location = new System.Drawing.Point(360, 327);
+            this.dtStartTime.Location = new System.Drawing.Point(606, 324);
             this.dtStartTime.Name = "dtStartTime";
             this.dtStartTime.ShowUpDown = true;
-            this.dtStartTime.Size = new System.Drawing.Size(253, 26);
+            this.dtStartTime.Size = new System.Drawing.Size(308, 26);
             this.dtStartTime.TabIndex = 9;
             // 
             // cmbDay
             // 
             this.cmbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDay.FormattingEnabled = true;
-            this.cmbDay.Location = new System.Drawing.Point(360, 255);
+            this.cmbDay.Location = new System.Drawing.Point(606, 249);
             this.cmbDay.Name = "cmbDay";
-            this.cmbDay.Size = new System.Drawing.Size(243, 28);
+            this.cmbDay.Size = new System.Drawing.Size(298, 28);
             this.cmbDay.TabIndex = 8;
             // 
             // cmbInstructor
             // 
             this.cmbInstructor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInstructor.FormattingEnabled = true;
-            this.cmbInstructor.Location = new System.Drawing.Point(360, 198);
+            this.cmbInstructor.Location = new System.Drawing.Point(606, 198);
             this.cmbInstructor.Name = "cmbInstructor";
-            this.cmbInstructor.Size = new System.Drawing.Size(243, 28);
+            this.cmbInstructor.Size = new System.Drawing.Size(298, 28);
             this.cmbInstructor.TabIndex = 7;
             // 
             // cmbCourse
             // 
             this.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(360, 144);
+            this.cmbCourse.Location = new System.Drawing.Point(606, 141);
             this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(243, 28);
+            this.cmbCourse.Size = new System.Drawing.Size(298, 28);
             this.cmbCourse.TabIndex = 6;
             // 
             // label6
@@ -165,7 +178,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(115, 400);
+            this.label6.Location = new System.Drawing.Point(343, 399);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 32);
             this.label6.TabIndex = 5;
@@ -176,7 +189,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(115, 198);
+            this.label5.Location = new System.Drawing.Point(343, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 32);
             this.label5.TabIndex = 4;
@@ -187,7 +200,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 264);
+            this.label4.Location = new System.Drawing.Point(343, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 32);
             this.label4.TabIndex = 3;
@@ -198,7 +211,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 336);
+            this.label3.Location = new System.Drawing.Point(343, 335);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 32);
             this.label3.TabIndex = 2;
@@ -209,7 +222,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(115, 141);
+            this.label2.Location = new System.Drawing.Point(344, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 32);
             this.label2.TabIndex = 1;
@@ -228,27 +241,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Create Schedule";
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Red;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClose.Location = new System.Drawing.Point(835, 546);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(224, 66);
-            this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // CreateScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 767);
+            this.ClientSize = new System.Drawing.Size(1757, 767);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CreateScheduleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Schedule";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CreateScheduleForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

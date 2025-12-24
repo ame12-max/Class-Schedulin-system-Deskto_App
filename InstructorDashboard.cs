@@ -15,18 +15,22 @@ namespace ClassSchedulingSystem
     {
         private string loggedInUsername;
         private int loggedInUserId;
+        private string loggedInRole;
 
 
         private void InstructorDashboard_Load(object sender, EventArgs e)
         {
-            // Leave this empty for now
+            lblWelcome.Text = "👤  " + loggedInUsername;
+            lblName.Text = "👤 " + loggedInUsername;
+            lblRolee.Text = " 📌  " + loggedInRole;
         }
 
-        public InstructorDashboard(string username, int userId)
+        public InstructorDashboard(string username, int userId,string Role)
         {
             InitializeComponent();
             loggedInUsername = username;
             loggedInUserId = userId;
+            loggedInRole = Role;
 
         }
 
@@ -40,7 +44,7 @@ namespace ClassSchedulingSystem
 
         private void btnAddComment_Click(object sender, EventArgs e)
         {
-            AddCommentForm f = new AddCommentForm(loggedInUserId);
+            InstructorAddComment f = new InstructorAddComment(loggedInUsername , loggedInUserId);
             f.Show();
         }
 
@@ -51,5 +55,9 @@ namespace ClassSchedulingSystem
             this.Close();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

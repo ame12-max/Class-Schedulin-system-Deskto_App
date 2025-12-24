@@ -12,9 +12,15 @@ namespace ClassSchedulingSystem
 {
     public partial class DepartmentHeadDashboard : Form
     {
-        public DepartmentHeadDashboard()
+        private string _username;
+        private int _userId;
+        private string _Role;
+        public DepartmentHeadDashboard(string username, int userId,string Role)
         {
             InitializeComponent();
+            _username = username;
+            _userId = userId;
+            _Role = Role;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +55,9 @@ namespace ClassSchedulingSystem
 
         private void DepartmentHeadDashboard_Load(object sender, EventArgs e)
         {
-
+            lblWelcome.Text = "👤 " + _username;
+            lblName.Text = "👤 " + _username;
+            lblRolee.Text = " 📌  " + _Role;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

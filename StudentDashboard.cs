@@ -14,11 +14,15 @@ namespace ClassSchedulingSystem
     public partial class StudentDashboard : Form
     {
         private int loggedInUserId;
+        private string _username;
+        private string _Role;
 
-        public StudentDashboard(int userId)
+        public StudentDashboard(int userId, string username,string Role)
         {
             InitializeComponent();
             loggedInUserId = userId;
+            _username = username;
+            _Role = Role;
         }
 
 
@@ -29,7 +33,9 @@ namespace ClassSchedulingSystem
 
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
-
+            lblWelcome.Text = "Welcome " + _username;
+            lblName.Text = "👤 " + _username;
+            lblRolee.Text = " 📌  " + _Role;
             LoadSchedules();
         }
 

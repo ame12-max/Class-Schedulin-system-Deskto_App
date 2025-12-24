@@ -64,6 +64,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorAddComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorAddComment.Designer.cs">
+      <DependentUpon>InstructorAddComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstructorViewScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorAddComment.resx">
+      <DependentUpon>InstructorAddComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

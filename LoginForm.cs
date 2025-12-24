@@ -105,11 +105,11 @@ namespace ClassSchedulingSystem
             MessageBox.Show($"Welcome {user.UserName}, Your Role: {user.Role}");
 
             if (user.Role == "Instructor")
-                new InstructorDashboard(user.UserName, user.UserId).Show();
+                new InstructorDashboard(user.UserName, user.UserId,user.Role).Show();
             else if (user.Role == "Student")
-                new StudentDashboard(user.UserId).Show();
+                new StudentDashboard(user.UserId, user.UserName, user.Role).Show();
             else if (user.Role == "Department Head")
-                new DepartmentHeadDashboard().Show();
+                new DepartmentHeadDashboard(user.UserName, user.UserId, user.Role).Show();
 
             this.Hide();
         }

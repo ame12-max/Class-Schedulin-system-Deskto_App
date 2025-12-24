@@ -92,16 +92,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 614);
+            this.ClientSize = new System.Drawing.Size(1749, 688);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvSchedules);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "InstructorViewScheduleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Schedule";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InstructorViewScheduleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedules)).EndInit();
             this.ResumeLayout(false);

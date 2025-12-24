@@ -51,14 +51,14 @@
             this.dgvSchedules.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSchedules.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvSchedules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSchedules.Location = new System.Drawing.Point(45, 133);
+            this.dgvSchedules.Location = new System.Drawing.Point(42, 138);
             this.dgvSchedules.MultiSelect = false;
             this.dgvSchedules.Name = "dgvSchedules";
             this.dgvSchedules.ReadOnly = true;
             this.dgvSchedules.RowHeadersWidth = 62;
             this.dgvSchedules.RowTemplate.Height = 28;
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedules.Size = new System.Drawing.Size(1064, 380);
+            this.dgvSchedules.Size = new System.Drawing.Size(1064, 402);
             this.dgvSchedules.TabIndex = 1;
             // 
             // btnRefresh
@@ -66,7 +66,7 @@
             this.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefresh.Location = new System.Drawing.Point(94, 575);
+            this.btnRefresh.Location = new System.Drawing.Point(94, 602);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(196, 55);
             this.btnRefresh.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.Location = new System.Drawing.Point(606, 575);
+            this.btnClose.Location = new System.Drawing.Point(643, 602);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(171, 55);
             this.btnClose.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 698);
+            this.ClientSize = new System.Drawing.Size(1739, 698);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvSchedules);
@@ -101,6 +101,7 @@
             this.Name = "ViewScheduleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Schedule";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewScheduleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedules)).EndInit();
             this.ResumeLayout(false);

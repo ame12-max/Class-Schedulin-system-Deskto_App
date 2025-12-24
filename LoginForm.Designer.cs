@@ -43,6 +43,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +149,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(637, 38);
+            this.label1.Location = new System.Drawing.Point(584, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 47);
@@ -185,11 +186,23 @@
             this.txtUser.Size = new System.Drawing.Size(456, 26);
             this.txtUser.TabIndex = 23;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Rockwell", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(348, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(892, 50);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Injibara University Class Scheduling System";
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 657);
+            this.ClientSize = new System.Drawing.Size(1767, 657);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.btnExit);
@@ -203,8 +216,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "loginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.loginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -228,6 +244,7 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label label5;
     }
 }
 

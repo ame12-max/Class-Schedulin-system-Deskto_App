@@ -18,4 +18,5 @@ C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Deb
 C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Debug\ClassSchedulingSystem.AddCommentForm.resources
 C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Debug\ClassSchedulingSystem.ViewFeedbackForm.resources
 C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Debug\ClassSchedulingSystem.loginForm.resources
-C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Debug\ClassSchedulingSystem.HomePage.resources
+C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Debug\ClassSchedulingSystem.HomeForm.resources
+C:\Users\MR AME\source\repos\ClassSchedulingSystem\ClassSchedulingSystem\obj\Debug\ClassSchedulingSystem.InstructorAddComment.resources
